@@ -24,7 +24,7 @@ Please see our [gulpfile](app/templates/gulpfile.js) for up to date information 
 ## Getting Started
 
 - Install dependencies: `npm install --global yo gulp-cli bower`
-- Install generator dependencies: `cd /path/to/generator-mspfed && npm-install`
+- Install generator dependencies: `cd /path/to/mirummsp-yo-generator && npm-install`
 - Link to the generator: `npm link`
 - Run `mkdir my-webapp && cd $_` then `yo mspfed` to scaffold your webapp
 - Run `gulp serve` to preview and watch for changes
