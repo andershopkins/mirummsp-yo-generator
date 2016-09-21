@@ -57,7 +57,7 @@ module.exports = generators.Base.extend({
         var done = this.async();
 
         if (!this.options['skip-welcome-message']) {
-            this.log(yosay('Mirum MSP Front End Boilerplate.\nHTML5 Boilerplate\nModernizr\njQuery\nSusy'));
+            this.log(yosay('Mirum MSP Front End Generator.\nAssemble\nH5BP\nModernizr\njQuery\nSusy'));
         }
 
         var prompts = [{
