@@ -1,6 +1,6 @@
-# Mirum MSP Front End web app generator
+# Mirum MSP Front End Generator
 
-> Mirum MSP Front End web app generator that scaffolds out a front-end web app using [gulp](http://gulpjs.com/) for the build process. Heavily copied from [Yeoman](https://github.com/yeoman/generator-webapp)
+> Mirum MSP Front End Generator that scaffolds out a front-end web app using [gulp](http://gulpjs.com/) for the build process and [assemble](https://github.com/assemble/assemble) for creating static sites or scaffolding projects. Forked and modified from [Yeoman](https://github.com/yeoman/generator-webapp)
 
 ![](screenshot.png)
 
