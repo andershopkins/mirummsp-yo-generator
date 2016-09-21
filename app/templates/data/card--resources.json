@@ -1,0 +1,32 @@
+{
+  "assemble": {
+    "title": "Assemble",
+    "subtitle": "Static site generator",
+    "desc": "Static site generator and rapid prototyping framework for Node.js, Grunt.js, and Yeoman and Gulp. Render templates with Handlebars, Lo-Dash or any template engine.",
+    "links": [
+      {"url":"https://github.com/assemble/assemble/", "link-text": "Assemble Github"},
+      {"url":"https://github.com/assemble/assemble-workshop", "link-text": "Assemble Workshop"},
+      {"url":"https://github.com/assemble/assemble/tree/master/examples", "link-text": "Assemble Examples"},
+      {"url": "https://github.com/assemble/assemble/tree/2ee29890f03a82270d1666e59d7ec396bf492f52/support/docs/src/content/recipes", "link-text": "Assemble Recipes"}
+    ]
+  },
+  "handlebars": {
+    "title": "Handlebars",
+    "subtitle": "Logic-less JavaScript templating engine",
+    "desc": "Handlebars.js is an extension to the Mustache templating language created by Chris Wanstrath. Handlebars.js and Mustache are both logicless templating languages ... .",
+    "links": [
+      {"url":"https://github.com/wycats/handlebars.js/", "link-text": "Handlebars Github"},
+      {"url":"https://github.com/assemble/handlebars-helpers", "link-text": "Handlebars Helpers"}
+    ]
+  },
+  "gulp": {
+    "title": "Gulp",
+    "subtitle": "JavaScript task runner",
+    "desc": "Gulp is a JS-based toolkit/task runner that has a large ecosytem of plugins and provides fast, reliable automation for development workflows.",
+    "links": [
+      {"url":"https://github.com/gulpjs/gulp", "link-text": "Gulp Github"},
+      {"url":"https://www.npmjs.com/search?q=gulp", "link-text": "NPM Gulp plugins"},
+      {"url":"http://gulpjs.com/plugins/", "link-text": "Gulp plugins"}
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+<div class="card {{#if classModifier}}card{{classModifier}}{{/if}}">
+  <header>
+    {{#if title}}
+      <h2>{{title}}</h2>
+    {{/if}}
+  </header>
+  <div class="content">
+    {{#if subtitle}}
+      <p style="font-size: 0.875em; color: #777; margin: 0 0 5px;">{{subtitle}}</p>
+    {{/if}}
+    {{#if desc}}
+      <p>{{desc}}</p>
+      <ul class="links-list">
+        {{#each links}}
+          <li><a class="link-text" href="{{url}}">{{link-text}}</a></li>
+        {{/each}}
+      </ul>
+    {{/if}}
+  </div>
+</div>

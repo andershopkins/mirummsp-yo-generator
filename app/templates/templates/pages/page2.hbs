@@ -1,0 +1,30 @@
+---
+title: Resources
+layout: default
+activePage: Page 2
+---
+<div class="slab slab--tall">
+  <div class="row-flex">
+    {{!--
+      > partial block helper notation
+      partial name
+      partial data content
+      partial modifiers (inline content)
+    --}}
+    {{>
+      card
+      card--resources.assemble
+      classModifier="--blue"
+    }}
+    {{>
+      card
+      card--resources.handlebars
+      classModifier="--blue"
+    }}
+    {{>
+      card
+      card--resources.gulp
+      classModifier="--blue"
+    }}
+  </div>
+</div>

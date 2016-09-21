@@ -1,0 +1,5 @@
+{{#each navigation}}
+  <li class="nav-list-item {{#eq @root.activePage this.link-text}}is-active{{/eq}}">
+    <a href="{{#if this.url}}{{this.url}}{{else}}#{{/if}}" class="nav-link">{{this.link-text}}</a>
+  </li>
+{{/each}}

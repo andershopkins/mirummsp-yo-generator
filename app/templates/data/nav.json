@@ -1,0 +1,16 @@
+{
+  "navigation": [
+    {
+      "url": "/index.html",
+      "link-text": "Home"
+    },
+    {
+      "url": "/page2.html",
+      "link-text": "Page 2"
+    },
+    {
+      "url": "/page3.html",
+      "link-text": "Page 3"
+    }
+  ]
+}

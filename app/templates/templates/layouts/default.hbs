@@ -1,0 +1,72 @@
+<!doctype html>
+<html<% if (includeModernizr) { %> class="no-js"<% } %> lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{{title}}</title>
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <!-- build:css /styles/vendor.css -->
+        <!-- bower:css -->
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- build:css /styles/main.css -->
+        <link rel="stylesheet" href="/styles/main.css?v={{moment cachebust "YYYYHHmmssZZ"}}">
+        <!-- endbuild -->
+        <% if (includeModernizr) { %>
+        <!-- build:js /scripts/vendor/modernizr.js -->
+        <script src="/bower_components/modernizr/modernizr.js"></script>
+        <!-- endbuild --><% } %>
+    </head>
+    <body class="not-touch msp-assemble">
+        <header>
+            <nav>
+                <ul>
+                    <li class="nav-title">Assemble <% if (includeBootstrap) { %><small>with Bootstrap</small><% } %></li>
+                    {{> nav nav}}
+                </ul>
+            </nav>
+        </header>
+        <main class="wrap-page">
+            <header class="header header--page">
+                <div class="wrap-content">
+                    <h1 class="heading">{{title}}</h1>
+                </div>
+            </header>
+            <div class="wrap-content">
+                {% body %}
+            </div>
+        </main>
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='https://www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+
+        <!-- build:js /scripts/vendor.js -->
+        <% if (includeBootstrap || includeJQuery) { %>
+        <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+        <% } %>
+        <!-- bower:js -->
+        <!-- endbower -->
+        <!-- endbuild -->
+        <% if (includeBootstrap) { %>
+        <!-- build:js /scripts/plugins.js -->
+<% bsPlugins.forEach(function (plugin) { -%>
+        <script src="<%= bsPath + plugin %>.js"></script>
+<% }) -%>
+        <!-- endbuild -->
+        <% } %>
+        <!-- build:js /scripts/main.js -->
+        <script src="/scripts/main.js"></script>
+        <!-- endbuild -->
+    </body>
+</html>
