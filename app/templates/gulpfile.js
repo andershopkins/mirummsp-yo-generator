@@ -105,7 +105,7 @@ gulp.task('lint:test', () => {
 
 gulp.task('html', [<% if (includeBabel) { -%>'scripts', <% } -%><% if (includeAssemble) { -%>'assemble', <% } -%>'styles'], () => {
     return gulp.src(<% if (includeAssemble) { -%>'.tmp/**'<% } else { -%>'app/*.html'<%}-%>)
-        .pipe($.useref({searchPath: ['.tmp', 'app', '.']}))
+        .pipe($.useref({searchPath: ['app', '.']}))
         .pipe($.if('*.js', $.uglify()))
         .pipe($.if('*.css', $.cssnano({safe: true, autoprefixer: false})))
         //.pipe($.if('*.html', $.htmlmin({collapseWhitespace: true})))
@@ -128,7 +128,7 @@ gulp.task('fonts', () => {
 gulp.task('extras', () => {
     return gulp.src([
         'app/*.*',
-        '!app/*.html'
+        <% if (!includeAssemble) { -%>'!app/*.html'<% } -%> 
     ], {
         dot: true
     }).pipe(gulp.dest('dist'));
@@ -165,7 +165,9 @@ gulp.task('serve', [<% if (includeAssemble) { -%>'assemble',<% } -%> 'styles', <
 <% } -%>
 
     gulp.watch([
+<% if (!includeAssemble) { -%>
         '.tmp/*.html',
+<% } -%>
 <% if (!includeBabel) { -%>
         'app/scripts/**/*.js',
 <% } -%>
@@ -237,15 +239,9 @@ gulp.task('wiredep', () => {<% if (includeSass) { %>
         .pipe(gulp.dest('app'));
 });
 
-<% if (includeAssemble) { -%>
-gulp.task('build', ['assemble', 'lint', 'html', 'images', 'fonts', 'extras'], () => {
-    return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
-});
-<% } else { %>
 gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
     return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
-<% } %>
 
 gulp.task('default', ['clean'], () => {
     gulp.start('build');
