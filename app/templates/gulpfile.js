@@ -3,7 +3,9 @@ const gulp = require('gulp');
 const gulpLoadPlugins = require('gulp-load-plugins');
 const browserSync = require('browser-sync');
 const del = require('del');
+// gulpLoad confusees these plugins with similarly named included packages, manually require them.
 const notify = require('gulp-notify');
+const cache = require('gulp-cached');
 const wiredep = require('wiredep').stream;
 
 <% if (includeAssemble) { -%>
@@ -128,7 +130,7 @@ gulp.task('fonts', () => {
 gulp.task('extras', () => {
     return gulp.src([
         'app/*.*',
-        <% if (!includeAssemble) { -%>'!app/*.html'<% } -%> 
+        <% if (!includeAssemble) { -%>'!app/*.html'<% } -%>
     ], {
         dot: true
     }).pipe(gulp.dest('dist'));
@@ -240,6 +242,7 @@ gulp.task('wiredep', () => {<% if (includeSass) { %>
 });
 
 gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
+    cache.caches = {};
     return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 
