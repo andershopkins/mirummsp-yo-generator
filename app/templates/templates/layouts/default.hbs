@@ -27,6 +27,7 @@
             <nav>
                 <ul>
                     <li class="nav-title">Assemble <% if (includeBootstrap) { %><small>with Bootstrap</small><% } %></li>
+                    <!-- See content/markdown.md for partial structure explaination -->
                     {{> nav nav}}
                 </ul>
             </nav>
@@ -38,6 +39,7 @@
                 </div>
             </header>
             <div class="wrap-content">
+                <!-- See content/markdown.md for {% body %} documention -->
                 {% body %}
             </div>
         </main>
