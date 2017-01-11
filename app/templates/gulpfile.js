@@ -107,7 +107,7 @@ gulp.task('lint:test', () => {
 
 gulp.task('html', [<% if (includeBabel) { -%>'scripts', <% } -%><% if (includeAssemble) { -%>'assemble', <% } -%>'styles'], () => {
     return gulp.src(<% if (includeAssemble) { -%>'.tmp/**'<% } else { -%>'app/*.html'<%}-%>)
-        .pipe($.useref({searchPath: ['app', '.']}))
+        .pipe($.useref({searchPath: ['.tmp', 'app', '.']}))
         .pipe($.if('*.js', $.uglify()))
         .pipe($.if('*.css', $.cssnano({safe: true, autoprefixer: false})))
         //.pipe($.if('*.html', $.htmlmin({collapseWhitespace: true})))
