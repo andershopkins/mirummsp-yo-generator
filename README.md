@@ -33,6 +33,18 @@ Please see our [gulpfile](app/templates/gulpfile.js) for up to date information 
 - Run `gulp build` to build your webapp for production
 - Run `gulp serve:dist` to preview the production build
 
+## Recommended Editor Plugins
+
+### VS Code
+* [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+* [SassLint](https://marketplace.visualstudio.com/items?itemName=glen-84.sass-lint)
+
+### Atom
+* [linter-eslint](https://atom.io/packages/linter-eslint)
+* [linter-sass-lint](https://atom.io/packages/linter-sass-lint)
+
+### Sublime Text
+* Use VS Code or Atom
 
 ## Docs
 
