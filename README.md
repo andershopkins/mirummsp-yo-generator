@@ -44,7 +44,8 @@ Please see our [gulpfile](app/templates/gulpfile.js) for up to date information 
 * [linter-sass-lint](https://atom.io/packages/linter-sass-lint)
 
 ### Sublime Text
-* Use VS Code or Atom
+* [SublimeLinter-eslint](https://packagecontrol.io/packages/SublimeLinter-eslint)
+* [SublimeLinter-contrib-sass-lint](https://packagecontrol.io/packages/SublimeLinter-contrib-sass-lint)
 
 ## Docs
 
